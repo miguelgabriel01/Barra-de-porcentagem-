@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta  name = " viewport "  content = " width = device-width, initial-scale = 1.0 " >
+  <title>Little birds music</title>
+  <link rel="stylesheet" href="./public/css/index.css">
+  <link rel="stylesheet" href="./public/css/mobile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kufam&family=Raleway:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="menu">
+    <a href="" id="logo">Little Birds</a>
+    <span id="marca-logo">Slipknot</span>
+  </section>
+
+  <section class="conteudo">
+    <h1 id="titulo">vermilion pt 2</h1>
+    <img src="./public/img/slipBanner-03.jpg" alt="Slipknot banda" id="banner">
+    <p id="musica">
+      
+          She seems dressed in all of me
+         Stretched across my shame
+         All the torment and the pain
+         Leaked through and covered me
+         I'd do anything to have her to myself
+         Just to have her for myself
+
+         <br> <br>
+
+         Now I don't know what to do
+         I don't know what to do
+         When she makes me sad
+
+         <br> <br>
+
+         She is everything to me
+         The unrequited dream
+         A song that no one sings
+         The unattainable
+         She's a myth that I have to believe in
+         All I need to make it real is one more reason
+
+         <br> <br>
+
+         I don't know what to do
+         I don;t know what to do
+         When she makes me sad
+
+         <br> <br>
+
+         But I won't let this build up inside of me
+
+         <br> <br>
+
+         But I won't let this build up inside of me
+         But I won't let this build up inside of me
+         But I won't let this build up inside of me
+
+         <br> <br>
+
+         I catch in my throat
+         Choke
+         Torn into pieces
+         I won't, no
+         I don't want to be this
+
+         <br><br>
+
+         But I won't let this build up inside of me
+
+         <br><br>
+
+         (I won't let this build up inside of me)
+         I won't let this build up inside of me
+         (I won't let this build up inside of me)
+         I won't let this build up inside of me
+         (I won't let this build up inside of me)
+         I won't let this build up inside of me
+         (I won't let this build up inside of me)
+         Won't let this build up inside of me
+
+         <br><br>
+
+         She isn't real
+
+         (I won't let this build up inside of me)
+         I can't make her real
+         (I won't let this build up inside of me)
+
+         <br><br>
+
+         She isn't real
+         
+         (I won't let this build up inside of me)
+         I can't make her real
+         (I won't let this build up inside of me)
+      </p>
+  </section>
+
+  <footer class="footer">
+    <a href="" id="contato">Miguel Gabriel</a>
+  </footer>
+    
+</body>
+<script>
+  //pegar a div com o conteudo
+  var conteudoPage = document.querySelector('#musica')
+  // variavel para criar bar de rolagem
+  var bar = document.createElement("div");
+  
+  //estilo para a bar
+  bar.style.height = "4px"
+  bar.style.width = "0px" 
+  bar.style.backgroundColor = "red"
+  bar.style.position = "fixed"
+  bar.style.top = "0"
+  bar.style.left = "0"
+  bar.style.zIndex = "9999"
+  bar.style.transition = "0.2.s"
+  
+  
+  //adciona no corpo da pagina
+  document.body.append(bar);
+  
+  //verificar o movimento do scroll
+  document.addEventListener("scroll", () => {
+    //console.log("Atualizando movimento do scroll");
+  
+    //verifica a posição atual do scroll de maneira estatica
+    //console.log(conteudo.offsetHeight)
+  
+    //const que armazena o tamanho da pagina
+    const tamanhoDaPagina = conteudoPage.offsetHeight;
+  
+  //verifica a posição atual do scroll de maneira atualizada
+  //console.log(window.pageYOffset)
+  const posicaoNaPagina = window.pageYOffset;
+  //tamanho da caixa com o conteudo
+  
+  //verificar em qual posição da pagina o usuario se encontra com a regra de 3
+  const atualizarBarra =  posicaoNaPagina  * 100 /  tamanhoDaPagina;
+  
+  
+  //atualizar a barrinha
+  bar.style.width = atualizarBarra + "%"
+  
+  })
+  
+  </script>
+</html>
